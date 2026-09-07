@@ -366,6 +366,7 @@ h2 span {
 
 
 ```css
+```css
 /* ================= PROJECTS ================= */
 
 .projects-header {
@@ -373,7 +374,7 @@ h2 span {
     justify-content: space-between;
     align-items: flex-end;
     gap: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .projects-header h2 {
@@ -384,17 +385,17 @@ h2 span {
     max-width: 400px;
     color: #7f8995;
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 
-/* PROJECT CARD */
+/* PROJECT */
 
 .project {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 35px;
-    padding: 55px 0;
+    grid-template-columns: 70px 1fr;
+    gap: 30px;
+    padding: 42px 0;
     border-top: 1px solid #29313b;
 }
 
@@ -408,8 +409,7 @@ h2 span {
 .project-number {
     color: #59636f;
     font-size: 13px;
-    font-weight: 600;
-    padding-top: 4px;
+    padding-top: 3px;
 }
 
 
@@ -417,34 +417,36 @@ h2 span {
 
 .project-image {
     width: 100%;
-    max-width: 900px;
-    height: auto;
+    max-width: 560px;
+    height: 250px;
+
     display: block;
+    margin: 0 0 24px 0;
 
-    margin: 0 0 30px 0;
-
-    border: 1px solid #29313b;
-    border-radius: 14px;
+    padding: 5px;
 
     background: #11161c;
 
-    object-fit: cover;
+    border: 1px solid #29313b;
+    border-radius: 10px;
+
+    object-fit: contain;
 
     transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
 /* IMAGE HOVER */
 
 .project-image:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: #3c4b38;
 
     box-shadow:
-        0 14px 35px rgba(0, 0, 0, 0.28);
+        0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -454,39 +456,38 @@ h2 span {
     color: #a7e85d;
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 1.2px;
-    margin-bottom: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 
 /* PROJECT TITLE */
 
 .project h3 {
-    font-size: 30px;
-    line-height: 1.2;
-    letter-spacing: -1px;
-    margin: 10px 0 14px;
+    font-size: 27px;
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+    margin: 8px 0 12px;
 }
 
 
 /* PROJECT DESCRIPTION */
 
 .project p {
-    max-width: 720px;
+    max-width: 700px;
     color: #8d97a3;
-    font-size: 14px;
-    line-height: 1.75;
-    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 
-/* PROJECT CHIPS */
+/* CHIPS */
 
 .chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin: 22px 0;
+    gap: 7px;
+    margin: 18px 0;
 }
 
 .chips span {
@@ -495,12 +496,10 @@ h2 span {
 
     color: #a7e85d;
 
-    padding: 6px 10px;
+    padding: 5px 9px;
 
-    font-size: 10px;
+    font-size: 9px;
     line-height: 1;
-
-    background: rgba(167, 232, 93, 0.02);
 }
 
 
@@ -509,11 +508,10 @@ h2 span {
 .project-link {
     display: inline-block;
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
 
     color: #d8dee5;
-
     text-decoration: none;
 
     transition:
@@ -525,6 +523,124 @@ h2 span {
     color: #a7e85d;
     transform: translateX(3px);
 }
+
+
+/* ================= CERTIFICATIONS ================= */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.cert-card {
+    display: flex;
+    gap: 20px;
+
+    border: 1px solid #28303a;
+    border-radius: 10px;
+
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.01);
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.cert-card:hover {
+    border-color: #34442b;
+    transform: translateY(-2px);
+}
+
+.cert-card > span {
+    color: #a7e85d;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cert-card h3 {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.cert-card p {
+    color: #707b88;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .projects-header p {
+        max-width: 100%;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 35px 0;
+    }
+
+    .project-number {
+        padding-top: 0;
+    }
+
+    .project-image {
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .project h3 {
+        font-size: 23px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .project {
+        padding: 30px 0;
+    }
+
+    .project-image {
+        height: 190px;
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    .project h3 {
+        font-size: 21px;
+    }
+
+    .project p {
+        font-size: 12px;
+    }
+
+    .chips span {
+        font-size: 9px;
+        padding: 5px 8px;
+    }
+
+}
+```
 
 
 /* ================= CERTIFICATIONS ================= */
